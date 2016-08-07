@@ -3,55 +3,53 @@ package trees;
 /**
  * Created by 777 on 07.08.16.
  */
-public abstract class Tree<T extends Comparable<T>> {
+
+public abstract class Tree<V extends Comparable<V>> {
 
 
 
-    Node<T> root;
+       Node<V> root;
 
-    public Tree(T elem) {
-        this.root = new Node<>(elem);
+    public Tree(V value) {
+        this.root = new Node<V>(value);
     }
 
-    public boolean search(T elem, Tree<T> tree) {
+    public boolean search(V value,  Tree<V> tree) {
 
         if(tree == null) return false;
 
-        if(elem.compareTo(tree.root.item) < 0){
-            return search(elem, tree.root.l);
+        if(tree.root.value.compareTo(tree.root.value) < 0){
+            return search(value, tree.root.l);
         }
 
-        return elem.compareTo(tree.root.item) >= 0 || search(elem, tree.root.r);
+        return tree.root.value.compareTo(tree.root.value) >= 0 || search(value, tree.root.r);
 
 
 
     }
 
-    public void insert(T elem, Tree tree) {
+    public void insert(Node node, Tree tree) {
 
     }
 
-    public void delete(T elem, Tree tree) {
+    public void delete(V value, Tree tree) {
     }
 
 
-    public class Node<T extends Comparable<T>> {
+    class Node<T extends Comparable<T>> {
 
-        T item;
+
+        T value;
         Tree<T> l;
         Tree<T> r;
 
-        public Node(T elem) {
+        public Node(T value) {
 
-            this.item = elem;
+            this.value = value;
             l = null;
             r = null;
         }
 
-
-        public T getItem() {
-            return item;
-        }
 
         public Tree<T> getL() {
             return l;
@@ -60,5 +58,8 @@ public abstract class Tree<T extends Comparable<T>> {
         public Tree<T> getR() {
             return r;
         }
+
+
+
     }
 }

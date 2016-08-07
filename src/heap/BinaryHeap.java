@@ -7,7 +7,7 @@ import java.util.Collection;
 /**
  * Created by 777 on 07.08.16.
  */
-public class BinomialHeap<T> extends Heap<T> implements Mergeable{
+public class BinomialHeap<T> extends Heap<T> implements MergeableHeap<T>{
 
 
     Collection<BinomialTree<T>> heap;
