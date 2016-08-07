@@ -5,6 +5,8 @@ package trees;
  */
 public abstract class Tree<T extends Comparable<T>> {
 
+
+
     Node<T> root;
 
     public Tree(T elem) {
@@ -33,7 +35,7 @@ public abstract class Tree<T extends Comparable<T>> {
     }
 
 
-    class Node<T extends Comparable<T>> {
+    public class Node<T extends Comparable<T>> {
 
         T item;
         Tree<T> l;
@@ -47,8 +49,16 @@ public abstract class Tree<T extends Comparable<T>> {
         }
 
 
+        public T getItem() {
+            return item;
+        }
 
+        public Tree<T> getL() {
+            return l;
+        }
 
-
+        public Tree<T> getR() {
+            return r;
+        }
     }
 }
