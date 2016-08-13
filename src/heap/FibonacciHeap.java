@@ -37,13 +37,22 @@ public class FibonacciHeap<T>  implements Heap<T>{
     }
 
     @Override
-    public T merge(T t1, T t2) {
-        return null;
+    public Heap<T> merge(Heap h1, Heap h2) {
+       return null;
+
     }
+
+
 }
 
 class FibonacciNode<T> {
 
     int degree;
+    boolean marked = false;
+    T value;
+
+    public  FibonacciNode (T elem){
+        value = elem;
+    }
 
 }

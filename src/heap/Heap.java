@@ -1,6 +1,5 @@
 package heap;
 
-import trees.Tree;
 
 import java.util.Collection;
 
@@ -13,7 +12,7 @@ public  interface Heap<T>  {
     boolean  add();
     T extractMin();
     T deleteMin();
-    T merge(T t1, T t2);
+    Heap<T> merge(Heap t1, Heap t2);
 
 
 
