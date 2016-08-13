@@ -10,7 +10,7 @@ public class FibonacciHeap<T>  implements Heap<T>{
 
     FibonacciNode minElement;
 
-    List<FibonacciNode<T>> roots;
+
 
     public FibonacciHeap (){
 
@@ -47,9 +47,41 @@ public class FibonacciHeap<T>  implements Heap<T>{
 
 class FibonacciNode<T> {
 
-    int degree;
-    boolean marked = false;
-    T value;
+    private int degree;
+    private boolean marked = false;
+    private T value;
+    private FibonacciNode<T> left;
+    private FibonacciNode<T> right;
+    private FibonacciNode<T> parent;
+    private FibonacciNode<T> child;
+
+    public int getDegree() {
+        return degree;
+    }
+
+    public boolean isMarked() {
+        return marked;
+    }
+
+    public T getValue() {
+        return value;
+    }
+
+    public FibonacciNode<T> getLeft() {
+        return left;
+    }
+
+    public FibonacciNode<T> getRight() {
+        return right;
+    }
+
+    public FibonacciNode<T> getParent() {
+        return parent;
+    }
+
+    public FibonacciNode<T> getChild() {
+        return child;
+    }
 
     public  FibonacciNode (T elem){
         value = elem;
