@@ -7,13 +7,15 @@ import java.util.Collection;
 /**
  * Created by 777 on 07.08.16.
  */
-public abstract class Heap<T> implements Heapable<T> {
+public  interface Heap<T>  {
 
-    public Collection<Tree> collection;
+    T findMin();
+    boolean  add();
+    T extractMin();
+    T deleteMin();
+    T merge(T t1, T t2);
 
-    public Heap (){}
 
 
 
-    public abstract  Heap<T> meld();
 }

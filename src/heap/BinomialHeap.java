@@ -1,20 +1,11 @@
 package heap;
 
-import java.util.LinkedList;
-import java.util.List;
-
 /**
- * Created by 777 on 07.08.16.
+ * Created by veter on 13.08.2016.
  */
-public class FibonacciHeap<T>  implements Heap<T>{
+public class BinomialHeap<T> implements Heap<T>{
 
-    FibonacciNode minElement;
 
-    List<FibonacciNode<T>> roots;
-
-    public FibonacciHeap (){
-
-    }
 
     @Override
     public T findMin() {
@@ -40,10 +31,4 @@ public class FibonacciHeap<T>  implements Heap<T>{
     public T merge(T t1, T t2) {
         return null;
     }
-}
-
-class FibonacciNode<T> {
-
-    int degree;
-
 }
