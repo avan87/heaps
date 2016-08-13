@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * Created by 777 on 07.08.16.
  */
-public class FibonacciHeap<T>  implements Heap<T>{
+public class FibonacciHeap<T> {
 
     FibonacciNode minElement;
 
@@ -16,27 +16,22 @@ public class FibonacciHeap<T>  implements Heap<T>{
 
     }
 
-    @Override
     public T findMin() {
         return null;
     }
 
-    @Override
     public boolean add() {
         return false;
     }
 
-    @Override
     public T extractMin() {
         return null;
     }
 
-    @Override
     public T deleteMin() {
         return null;
     }
 
-    @Override
     public Heap<T> merge(Heap h1, Heap h2) {
        return null;
 
