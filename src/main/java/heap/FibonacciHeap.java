@@ -236,11 +236,12 @@ class FibonacciHeap<T extends Comparable>{
         ArrayList<Node<T>> toList() {
             ArrayList<Node<T>> list = new ArrayList<>();
             Node<T> cur = this;
-            while (cur != this){
+            do{
                 list.add(cur);
                 if (cur.child != null) list.addAll(cur.child.toList());
                 cur = cur.right;
             }
+            while (cur != this);
             return list;
         }
     }

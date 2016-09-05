@@ -9,12 +9,8 @@ import java.util.Collection;
 public  interface Heap<T>  {
 
     T findMin();
-    boolean  add();
+    boolean insert(T item);
     T extractMin();
     T deleteMin();
-    Heap<T> merge(Heap t1, Heap t2);
-
-
-
-
+    Heap<T> merge(Heap heap);
 }
